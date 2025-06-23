@@ -6,3 +6,6 @@ Cricket Craze 🏏 A dynamic web app built with Django that showcases live, upco
 2. Before cloning create virtual enviroment for better performance.
 3. Open Terminal and write python manage.py runserver (for mac use python3).
 4. Django server can run on default port if you want you run on desired port add port number after python manage.py runserver <your_portno.>.
+
+## Video Link
+https://drive.google.com/file/d/1c04BoSJKrG8yH0jzfPqsIXcDyq2LlDuA/view?usp=sharing
