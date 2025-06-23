@@ -1,7 +1,7 @@
 # Lifease_assignment_Chetan
 Cricket Craze 🏏 A dynamic web app built with Django that showcases live, upcoming, and completed cricket matches. Includes detailed scorecards, match summaries, and team stats with a modern, CRIC-style UI.
 
-<bold>Steps to Run
+<bold>Steps to Run</bold>
 1. Install required packages like (Django, python) modules (requests).
 2. Before cloning create virtual enviroment for better performance.
 3. Open Terminal and write python manage.py runserver (for mac use python3).
