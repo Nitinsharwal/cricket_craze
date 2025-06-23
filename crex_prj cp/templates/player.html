@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Players Information{% endblock %}
+{% block content %}
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: #1d4ed8;
+            color: white;
+        }
+        img {
+            width: 32px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center;">Some Popular Players Playing in current series</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Flag</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+                <tr>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.country }}</td>
+                    <td>
+                        {% if player.country_code %}
+                            <img src="https://flagcdn.com/{{ player.country_code }}.svg" alt="{{ player.country }}">
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}Live / Scheduled Matches{% endblock %}
+
+{% block content %}
+<style>
+    .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .matches-section {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    .matches-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .match-card {
+        background: #fff;
+        padding: 16px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .match-name {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .match-detail {
+        margin: 2px 0;
+    }
+
+    .no-data {
+        font-size: 14px;
+        color: #888;
+    }
+</style>
+
+<h2 class="title">Completed / Scheduled Matches</h2>
+
+<div class="matches-section">
+    {% if matches %}
+        <div class="matches-container">
+            {% for match in matches %}
+                {% if match.status|lower == "live" %}
+                    <div class="match-card">
+                        <div class="match-name">{{ match.name }}</div>
+                        <div class="match-detail"><strong>Status:</strong> {{ match.status }}</div>
+                        <div class="match-detail"><strong>Venue:</strong> {{ match.venue }}</div>
+                        <div class="match-detail"><strong>Date & Time:</strong> {{ match.date }} {{ match.time }}</div>
+                        <div class="match-detail"><strong>Teams:</strong> {{ match.teams|join:" vs " }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-data">No live match data available.</p>
+    {% endif %}
+</div>
+
+<div class="matches-section">
+    <h3 class="section-title">Scheduled Matches</h3>
+    {% if matches %}
+        <div class="matches-container">
+            {% for match in matches %}
+                {% if match.status|lower != "live" %}
+                    <div class="match-card">
+                        <div class="match-name">{{ match.name }}</div>
+                        <div class="match-detail"><strong>Status:</strong> {{ match.status }}</div>
+                        <div class="match-detail"><strong>Venue:</strong> {{ match.venue }}</div>
+                        <div class="match-detail"><strong>Date & Time:</strong> {{ match.date }} {{ match.time }}</div>
+                        <div class="match-detail"><strong>Teams:</strong> {{ match.teams|join:" vs " }}</div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-data">No scheduled match data available.</p>
+    {% endif %}
+</div>
+{% endblock %}
