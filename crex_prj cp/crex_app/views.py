@@ -106,3 +106,6 @@ def contact(request):
                 contact.save()
                 messages.success(request,'Your information has been submitted..!')
         return render(request,'contact.html',{'success': True, 'now': now()})
+
+def default_url(request,id):
+    return render(request,'default_url.html',context={'id' : id})

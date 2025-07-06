@@ -8,4 +8,5 @@ urlpatterns = [
     path('match/<str:id>/', views.match_detail_view, name='match_detail'),
     path('about/', views.about_view, name='about'),
     path('contact/', views.contact, name='contact'),
+    path('<id>/', views.default_url, name='default_url'),
 ]
