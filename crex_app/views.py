@@ -107,7 +107,7 @@ def contact(request):
                 desc = request.POST.get('desc')
                 contact = Contact(name=name,phone=phone,email=email,desc=desc,date=datetime.today())
                 if isEmpty(email):
-                    messages.warning(request,"Name not be null")
+                    messages.warning(request,"E-mail can't be null")
                     return redirect('/contact/')
                 contact.save()
                 messages.success(request,'Your information has been submitted..!')
