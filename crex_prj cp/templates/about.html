@@ -1,0 +1,205 @@
+{% extends "base.html" %} {% block title %}About | Cricket Craze{% endblock %}
+{% block content %}
+<style>
+  .about-container {
+    max-width: 1100px;
+    margin: auto;
+    background: #fff;
+  }
+
+  .about-container h1,
+  .about-container h2,
+  .about-container h3 {
+    color: #007bff;
+  }
+
+  .about-container p {
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  .creator-section {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-left: 5px solid #007bff;
+    margin-top: 30px;
+  }
+
+  .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .about-container ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about-container ul li {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-container {
+      padding: 20px 10px;
+    }
+  }
+</style>
+
+<div class="about-container">
+  <h1>About Cricket Craze</h1>
+  <p>
+    Welcome to <span class="highlight">Cricket Craze</span> — your one-stop
+    destination for everything cricket! Whether you're a die-hard fan or a
+    curious newcomer, this platform is crafted to keep you updated with live
+    scores, match insights, detailed player stats, match reports, and thrilling
+    cricket stories from around the globe.
+  </p>
+  <h2>🏏 Tribute to King Kohli – The Run Machine 👑 - Also my favorite !</h2>
+  <p>
+    Virat Kohli is more than just a cricketer — he’s an emotion. From chasing
+    targets to chasing greatness, he makes it look effortless. The passion in
+    his eyes speaks louder than any scoreboard. Every shot he plays feels like
+    poetry written with a bat.<br>
+    <span class="highlight">
+Virat Kohli is passion, power, and perfection. A true legend, chase master, and icon of Indian cricket. His dedication, aggression, and consistency inspire millions. King Kohli will forever reign supreme.</span>
+  </p>
+  <p>
+    At Cricket Craze, we believe that cricket is more than just a game — it's a
+    shared emotion, a passion that unites people across continents, cultures,
+    and generations. We aim to capture the heartbeat of this beautiful sport and
+    bring it to your screen in the most engaging way possible.
+  </p>
+
+  <h2>Our Mission</h2>
+  <p>
+    The mission behind Cricket Craze is simple yet powerful —
+    <strong
+      >to connect cricket fans with rich, live, and meaningful content</strong
+    >. Whether it's the thrill of a last-ball finish or the quiet brilliance of
+    a disciplined spell of bowling, we aim to document, analyze, and celebrate
+    every nuance of the game.
+  </p>
+
+  <h2>What You Can Explore</h2>
+  <ul>
+    <li>
+      <strong>Live Scores:</strong> Instant updates from domestic and
+      international matches
+    </li>
+    <li>
+      <strong>Match Summaries:</strong> In-depth analysis of match progress,
+      stats, and highlights
+    </li>
+    <li>
+      <strong>Scorecards:</strong> Full team and player performance breakdowns
+    </li>
+    <li>
+      <strong>Player Profiles:</strong> Stats, biographies, and career
+      achievements
+    </li>
+    <li>
+      <strong>Upcoming Fixtures:</strong> Stay ahead of the game with future
+      match schedules
+    </li>
+    <li>
+      <strong>Cricket Articles:</strong> Blogs, interviews, and
+      behind-the-scenes stories
+    </li>
+  </ul>
+
+  <h2>Our Technology</h2>
+  <p>
+    This platform is built using the latest web technologies with a strong
+    backend powered by <span class="highlight">Python</span>,
+    <span class="highlight">Django</span>, and
+    <span class="highlight">JSON APIs</span>. Our frontend is styled for
+    responsiveness and clarity using modern HTML5, CSS3, and JavaScript
+    frameworks.
+  </p>
+
+  <p>
+    We’re continuously evolving and integrating more features like player
+    comparison, interactive visualizations, and community-driven polls to
+    enhance your cricketing experience.
+  </p>
+
+  <div class="creator-section">
+    <h2>Meet the Creator</h2>
+    <p>
+      Hello! I'm <span class="highlight">Chetan</span> — the mind behind Cricket
+      Craze.
+    </p>
+    <p>
+      I'm a recent graduate and an
+      <strong>aspiring Python developer</strong> with a deep interest in both
+      software development and the world of cricket. I created this website to
+      merge two of my passions — coding and cricket — and offer something
+      valuable to the fan community.
+    </p>
+
+    <p>
+      Since the beginning of my tech journey, I've been motivated by the desire
+      to solve real-world problems through code. My expertise lies in
+      <span class="highlight">Python programming</span>, and I'm steadily
+      growing my skills in
+      <span class="highlight"
+        >backend development, data handling, and API integration</span
+      >. I'm also exploring full-stack development and currently building
+      multiple projects to improve my practical skills and portfolio.
+    </p>
+
+    <p>
+      Cricket Craze is not just a project — it’s a reflection of my ambition to
+      blend creativity with functionality. I believe that passion, when paired
+      with purpose and persistence, leads to meaningful outcomes — and this
+      website is proof of that belief.
+    </p>
+
+    <p>
+      I’m on a mission to build a <strong>successful career in tech</strong> and
+      contribute to the open-source and developer community along the way. I’m
+      always open to learning, collaborating, and growing with like-minded
+      developers and tech enthusiasts.
+    </p>
+  </div>
+
+  <h3>Why Cricket Craze Matters</h3>
+  <p>
+    In a world full of cricket portals and scoreboards, Cricket Craze aims to be
+    different. It’s not just about stats and outcomes — it’s about stories,
+    spirit, and sharing the game’s excitement with a personal touch. We aim to
+    deliver that edge, that uniqueness, that makes fans feel more connected to
+    the game and each other.
+  </p>
+
+  <p>
+    So whether you want to track a tight chase, read about your favorite
+    cricketer, or simply feel a part of the global cricket family — Cricket
+    Craze welcomes you!
+  </p>
+
+  <h3>Let's Connect</h3>
+  <p>
+    If you’d like to collaborate, share feedback, or just talk cricket or tech —
+    feel free to reach out! You can connect with me on:
+    nitinparjapat94@gmail.com or simply through
+    <a href="{% url 'contact' %}">
+      <li>Contact Us</li>
+    </a>
+  </p>
+
+  <h3>Thank You for Visiting!</h3>
+  <p>
+    Thank you for being a part of Cricket Craze. The journey has just begun, and
+    there's much more to come. Together, let’s celebrate cricket like never
+    before!
+  </p>
+
+  <br /><br />
+  <p style="text-align: center; color: #888">
+    — Chetan, Creator of Cricket Craze
+  </p>
+</div>
+{% endblock %}
