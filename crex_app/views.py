@@ -1,4 +1,4 @@
-from django.shortcuts import render,Http404
+from django.shortcuts import render,Http404,redirect
 import requests
 from .models import *
 from django.contrib import messages
@@ -96,6 +96,9 @@ def match_detail_view(request, id):
 def about_view(request):
     return render(request, 'about.html')
 
+def isEmpty(value):
+    return value is None or value is ''
+
 def contact(request):
         if request.method == "POST":
                 name = request.POST.get('name')
@@ -103,6 +106,9 @@ def contact(request):
                 email = request.POST.get('email')
                 desc = request.POST.get('desc')
                 contact = Contact(name=name,phone=phone,email=email,desc=desc,date=datetime.today())
+                if isEmpty(email):
+                    messages.warning(request,"Name not be null")
+                    return redirect('/contact/')
                 contact.save()
                 messages.success(request,'Your information has been submitted..!')
         return render(request,'contact.html',{'success': True, 'now': now()})
